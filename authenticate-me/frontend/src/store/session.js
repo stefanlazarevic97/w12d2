@@ -8,9 +8,9 @@ const setCurrentUser = user => ({
     payload: user
 });
 
-// const removeCurrentUser = () => ({
-//     type: REMOVE_CURRENT_USER
-// })
+const removeCurrentUser = () => ({
+    type: REMOVE_CURRENT_USER
+})
 
 export function storeCSRFToken(response) {
     const csrfToken = response.headers.get("X-CSRF-Token");
@@ -59,11 +59,21 @@ export const signup = (user) => async dispatch => {
     return res;
 }
 
+export const logout = () => async dispatch => {
+    const res = await csrfFetch('/api/session', {
+        method: "DELETE"
+    });
+
+    storeCurrentUser(null);
+    dispatch(removeCurrentUser());
+    return res;
+}
+
 const initialState = {
     user: JSON.parse(sessionStorage.getItem("currentUser"))
 };
 
-const sessionReducer = (state = initialState, action) => {
+export default function sessionReducer(state = initialState, action) {
     switch (action.type) {
         case SET_CURRENT_USER:
             return { ...state, user: action.payload };
@@ -73,5 +83,3 @@ const sessionReducer = (state = initialState, action) => {
             return state;
     }
 };
-
-export default sessionReducer;
