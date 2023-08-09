@@ -12,13 +12,18 @@ const setCurrentUser = user => ({
 //     type: REMOVE_CURRENT_USER
 // })
 
-// const storeCurrentUser = user => {
-//     if (user) {
-//         sessionStorage.setItem("currentUser", JSON.stringify(user));
-//     } else {
-//         sessionStorage.removeItem("currentUser");
-//     }
-// }
+export function storeCSRFToken(response) {
+    const csrfToken = response.headers.get("X-CSRF-Token");
+    if (csrfToken) sessionStorage.setItem("X-CSRF-Token", csrfToken);
+}
+
+const storeCurrentUser = user => {
+    if (user) {
+        sessionStorage.setItem("currentUser", JSON.stringify(user));
+    } else {
+        sessionStorage.removeItem("currentUser");
+    }
+}
 
 export const login = ({ credential, password }) => async dispatch => {
     const res = await csrfFetch("/api/session", {
@@ -27,12 +32,23 @@ export const login = ({ credential, password }) => async dispatch => {
     });
 
     const userData = await res.json();
-    sessionStorage.setItem('currentUser', userData.user)
+    storeCurrentUser(userData.user);
     dispatch(setCurrentUser(userData.user));
     return userData;
 }
 
-const initialState = { user: null };
+export const restoreSession = () => async dispatch => {
+    const res = await csrfFetch('/api/session');
+    storeCSRFToken(res);
+    const data = await res.json();
+    storeCurrentUser(data.user);
+    dispatch(setCurrentUser(data.user));
+    return res;
+}
+
+const initialState = {
+    user: JSON.parse(sessionStorage.getItem("currentUser"))
+};
 
 const sessionReducer = (state = initialState, action) => {
     switch (action.type) {
