@@ -408,3 +408,399 @@ Processing by Api::UsersController#create as JSON
 Completed 200 OK in 287ms (Views: 0.1ms | ActiveRecord: 6.1ms | Allocations: 12108)
 
 
+Started GET "/" for ::1 at 2023-08-08 18:15:37 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stefanlazarevic/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stefanlazarevic/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 23)
+Completed 200 OK in 1ms (Views: 0.4ms | Allocations: 261)
+
+
+Started GET "/api/session" for ::1 at 2023-08-08 18:15:41 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 11.2ms | Allocations: 8759)
+
+
+
+ActionView::MissingTemplate - Missing template api/users/show with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+Searched in::
+  app/controllers/api/sessions_controller.rb:5:in `show'
+
+Started GET "/api/session" for ::1 at 2023-08-08 18:15:52 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.5ms | Allocations: 1607)
+
+
+
+ActionView::MissingTemplate - Missing template api/users/show with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+Searched in::
+  app/controllers/api/sessions_controller.rb:5:in `show'
+
+Started GET "/" for ::1 at 2023-08-08 18:16:57 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stefanlazarevic/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stefanlazarevic/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.0ms | Allocations: 23)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 266)
+
+
+Started GET "/api/session" for ::1 at 2023-08-08 18:16:59 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 9.8ms | Allocations: 5341)
+
+
+
+ActionView::MissingTemplate - Missing template api/users/show with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+Searched in::
+  app/controllers/api/sessions_controller.rb:5:in `show'
+
+Started GET "/api/session" for ::1 at 2023-08-08 18:17:02 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.8ms | Allocations: 1595)
+
+
+
+ActionView::MissingTemplate - Missing template api/users/show with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+Searched in::
+  app/controllers/api/sessions_controller.rb:5:in `show'
+
+Started GET "/api/session" for ::1 at 2023-08-08 18:17:12 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms | Allocations: 1465)
+
+
+
+ActionView::MissingTemplate - Missing template api/users/show with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+Searched in::
+  app/controllers/api/sessions_controller.rb:5:in `show'
+
+Started GET "/" for ::1 at 2023-08-08 18:17:46 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stefanlazarevic/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stefanlazarevic/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.8ms | Allocations: 527)
+Completed 200 OK in 625ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 948975)
+
+
+Started GET "/" for ::1 at 2023-08-08 18:17:49 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stefanlazarevic/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stefanlazarevic/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | Allocations: 278)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 1158)
+
+
+Started POST "/api/session" for ::1 at 2023-08-08 18:17:58 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"credential"=>"Demo-lition", "password"=>"[FILTERED]", "session"=>{"credential"=>"Demo-lition", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Demo-lition"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:31:in `find_by_credentials'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44:in `generate_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "Demo-lition"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36:in `reset_session_token!'
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-08-09 01:17:59.250062"], ["id", 1]]
+  ↳ app/models/user.rb:36:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36:in `reset_session_token!'
+Completed 500 Internal Server Error in 299ms (ActiveRecord: 9.2ms | Allocations: 18497)
+
+
+
+ActionView::MissingTemplate - Missing template api/sessions/show, application/show with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+Searched in:
+  * "/Users/stefanlazarevic/Documents/appAcademy/aA-classwork/w12d2/authenticate-me/app/views"
+Did you mean?  api/users/show:
+  app/controllers/api/sessions_controller.rb:16:in `create'
+
+Started GET "/" for ::1 at 2023-08-08 18:26:59 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stefanlazarevic/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stefanlazarevic/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 23)
+Completed 200 OK in 1ms (Views: 0.4ms | Allocations: 264)
+
+
+Started GET "/api/session" for ::1 at 2023-08-08 18:27:05 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 1.6ms | Allocations: 420)
+Completed 200 OK in 42ms (Views: 4.2ms | ActiveRecord: 11.7ms | Allocations: 8413)
+
+
+Started POST "/api/test" for ::1 at 2023-08-08 18:28:55 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/api/test"):
+  
+Started GET "/" for ::1 at 2023-08-08 18:29:22 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stefanlazarevic/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stefanlazarevic/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 23)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 268)
+
+
+Started GET "/api/session" for ::1 at 2023-08-08 18:29:43 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.5ms | Allocations: 268)
+Completed 200 OK in 21ms (Views: 1.5ms | ActiveRecord: 10.9ms | Allocations: 5200)
+
+
+Started POST "/api/test" for ::1 at 2023-08-08 18:29:58 -0700
+Processing by ApplicationController#test as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22:in `current_user'
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 1099)
+
+
+Started POST "/api/test" for ::1 at 2023-08-08 18:30:04 -0700
+Processing by ApplicationController#test as */*
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms | Allocations: 621)
+
+
+
+ActionController::InvalidAuthenticityToken - Can't verify CSRF token authenticity.:
+
+Started POST "/api/test?login" for ::1 at 2023-08-08 19:24:38 -0700
+Processing by ApplicationController#test as */*
+  Parameters: {"login"=>nil}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `test'
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 8.5ms | Allocations: 6602)
+
+
+
+NoMethodError - undefined method `login!' for #<ApplicationController:0x00000000006810>
+            login!(User.first)
+            ^^^^^^
+Did you mean?  login:
+  app/controllers/application_controller.rb:9:in `test'
+
+Started POST "/api/test" for ::1 at 2023-08-08 19:24:54 -0700
+Processing by ApplicationController#test as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22:in `current_user'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 871)
+
+
+Started POST "/api/test?login" for ::1 at 2023-08-08 19:25:02 -0700
+Processing by ApplicationController#test as */*
+  Parameters: {"login"=>nil}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `test'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms | Allocations: 3408)
+
+
+
+NoMethodError - undefined method `login!' for #<ApplicationController:0x000000000068b0>
+            login!(User.first)
+            ^^^^^^
+Did you mean?  login:
+  app/controllers/application_controller.rb:9:in `test'
+
+Started POST "/api/test?login" for ::1 at 2023-08-08 19:25:35 -0700
+Processing by ApplicationController#test as */*
+  Parameters: {"login"=>nil}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `test'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms | Allocations: 3408)
+
+
+
+NoMethodError - undefined method `login!' for #<ApplicationController:0x00000000006900>
+            login!(User.first)
+            ^^^^^^
+Did you mean?  login:
+  app/controllers/application_controller.rb:9:in `test'
+
+Started POST "/api/test?login" for ::1 at 2023-08-08 19:27:29 -0700
+Processing by ApplicationController#test as */*
+  Parameters: {"login"=>nil}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `test'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44:in `generate_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "Demo-lition"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36:in `reset_session_token!'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36:in `reset_session_token!'
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-08-09 02:27:29.277602"], ["id", 1]]
+  ↳ app/models/user.rb:36:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36:in `reset_session_token!'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22:in `current_user'
+Completed 200 OK in 34ms (Views: 0.1ms | ActiveRecord: 9.7ms | Allocations: 10714)
+
+
+Started POST "/api/test" for ::1 at 2023-08-08 19:27:38 -0700
+Processing by ApplicationController#test as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22:in `current_user'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 910)
+
+
+Started POST "/api/test?logout" for ::1 at 2023-08-08 19:27:58 -0700
+Processing by ApplicationController#test as */*
+  Parameters: {"logout"=>nil}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2896)
+
+
+
+NoMethodError - undefined method `logout!' for #<ApplicationController:0x00000000007378>
+            logout!
+            ^^^^^^^
+Did you mean?  logout:
+  app/controllers/application_controller.rb:11:in `test'
+
+Started POST "/api/test?logout" for ::1 at 2023-08-08 19:28:06 -0700
+Processing by ApplicationController#test as */*
+  Parameters: {"logout"=>nil}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22:in `current_user'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44:in `generate_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "Demo-lition"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36:in `reset_session_token!'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-08-09 02:28:06.354209"], ["id", 1]]
+  ↳ app/models/user.rb:36:in `reset_session_token!'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36:in `reset_session_token!'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22:in `current_user'
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 6.6ms | Allocations: 10564)
+
+
+Started POST "/api/test" for ::1 at 2023-08-08 19:28:13 -0700
+Processing by ApplicationController#test as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22:in `current_user'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 993)
+
+
+Started GET "/" for ::1 at 2023-08-08 19:28:55 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stefanlazarevic/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stefanlazarevic/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 23)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 235)
+
+
+Started POST "/api/test" for ::1 at 2023-08-08 19:29:13 -0700
+Processing by ApplicationController#test as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:22:in `current_user'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 935)
+
+
+Started GET "/" for ::1 at 2023-08-08 19:29:27 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stefanlazarevic/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stefanlazarevic/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 193)
+
+
+Started POST "/api/test" for ::1 at 2023-08-08 19:30:10 -0700
+Processing by ApplicationController#test as */*
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms | Allocations: 698)
+
+
+
+ActionController::InvalidAuthenticityToken - Can't verify CSRF token authenticity.:
+
+Started GET "/" for ::1 at 2023-08-08 19:30:20 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stefanlazarevic/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stefanlazarevic/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 193)
+
+
+Started POST "/api/test" for ::1 at 2023-08-08 19:39:44 -0700
+
+SyntaxError - syntax error, unexpected constant, expecting `do' or '{' or '('
+...   rescue from ActionController::InvalidAuthenticityToken, 
+...               ^~~~~~~~~~~~~~~~
+/Users/stefanlazarevic/Documents/appAcademy/aA-classwork/w12d2/authenticate-me/app/controllers/application_controller.rb:6: syntax error, unexpected label, expecting '='
+        with: :invalid_authenticity_token
+        ^~~~~:
+  app/controllers/application_controller.rb:5:in `'
+
+Started POST "/api/test" for ::1 at 2023-08-08 19:40:20 -0700
+
+SyntaxError - syntax error, unexpected constant, expecting `do' or '{' or '('
+...   rescue from ActionController::InvalidAuthenticityToken,
+...               ^~~~~~~~~~~~~~~~
+/Users/stefanlazarevic/Documents/appAcademy/aA-classwork/w12d2/authenticate-me/app/controllers/application_controller.rb:6: syntax error, unexpected label, expecting '='
+        with: :invalid_authenticity_token
+        ^~~~~:
+  app/controllers/application_controller.rb:5:in `'
+
+Started POST "/api/test" for ::1 at 2023-08-08 19:40:36 -0700
+Processing by ApplicationController#test as */*
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (Views: 0.3ms | Allocations: 761)
+
+
+Started GET "/api/session" for ::1 at 2023-08-08 19:41:54 -0700
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 9.0ms | Allocations: 5822)
+
+
+Started GET "/api/session" for ::1 at 2023-08-08 19:42:12 -0700
+Processing by Api::SessionsController#show as JSON
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 3926)
+
+
+
+NameError - undefined local variable or method `requests' for #<Api::SessionsController:0x0000000000b158>
+        if requests.accepts.first.html?
+           ^^^^^^^^
+Did you mean?  request
+               request=
+               @_request:
+  app/controllers/application_controller.rb:61:in `unhandled_error'
+
+Started GET "/api/session" for ::1 at 2023-08-08 19:43:07 -0700
+Processing by Api::SessionsController#show as JSON
+  Rendering api/errors/internal_server_error.json.jbuilder
+  Rendered api/errors/internal_server_error.json.jbuilder (Duration: 0.4ms | Allocations: 219)
+
+NameError - undefined local variable or method `undefined' for #<Api::SessionsController:0x0000000000bbf8>
+
+        banana = undefined
+                 ^^^^^^^^^
+Did you mean?  undef:
+	app/controllers/api/sessions_controller.rb:3:in `show'
+
+Completed 500 Internal Server Error in 5ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 4473)
+
+
