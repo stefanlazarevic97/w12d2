@@ -8,9 +8,9 @@ const setCurrentUser = user => ({
     payload: user
 });
 
-const removeCurrentUser = () => ({
-    type: REMOVE_CURRENT_USER
-})
+// const removeCurrentUser = () => ({
+//     type: REMOVE_CURRENT_USER
+// })
 
 // const storeCurrentUser = user => {
 //     if (user) {
@@ -26,15 +26,13 @@ export const login = ({ credential, password }) => async dispatch => {
         body: JSON.stringify({ credential, password })
     });
 
-    const data = await res.json();
-    // storeCurrentUser(data.user);
-    dispatch(setCurrentUser(data.user));
-    return res;
+    const userData = await res.json();
+    sessionStorage.setItem('currentUser', userData.user)
+    dispatch(setCurrentUser(userData.user));
+    return userData;
 }
 
-const initialState = {
-    user: JSON.parse(sessionStorage.getItem("currentUser"))
-};
+const initialState = { user: null };
 
 const sessionReducer = (state = initialState, action) => {
     switch (action.type) {
