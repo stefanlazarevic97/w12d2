@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 import ProfileButton from "./ProfileButton";
-// import LoginFormModal from '../LoginFormModal';
+import LoginFormModal from "../LoginFormModal";
 import './Navigation.css';
 
 export default function Navigation() {
@@ -16,7 +16,7 @@ export default function Navigation() {
     } else {
         sessionLinks = (
             <>
-                {/* <LoginFormModal /> */}
+                <LoginFormModal />
                 <NavLink to="/signup">Sign Up</NavLink>
             </>
         );

@@ -1,22 +1,17 @@
-import { useState } from "react"
-import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 import * as sessionActions from "../../store/session";
-import './LoginForm.css';
-import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
+import "./LoginForm.css";
 
-export default function LoginFormPage() {
+export default function LoginForm() {
     const dispatch = useDispatch();
-    const sessionUser = useSelector(state => state.session.user);
     const [credential, setCredential] = useState('');
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState([]);
-    
-    if (sessionUser) return <Redirect to="/" />;
-    
+
     const handleSubmit = (e) => {
         e.preventDefault();
         setErrors([]);
-
         return dispatch(sessionActions.login({ credential, password }))
             .catch(async (res) => {
                 let data;
@@ -35,7 +30,7 @@ export default function LoginFormPage() {
                     setErrors([res.statusText]);
                 }
             });
-    }
+    };
 
     return (
         <>
@@ -45,7 +40,7 @@ export default function LoginFormPage() {
                 <ul>
                     {errors.map(error => <li key={error}>{error}</li>)}
                 </ul>
-                <label>Username or Email: 
+                <label>Username or Email:
                     <input
                         type="text"
                         value={credential}
@@ -54,8 +49,8 @@ export default function LoginFormPage() {
                     />
                 </label>
 
-                <label>Password 
-                    <input 
+                <label>Password
+                    <input
                         type="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
